@@ -116,6 +116,8 @@ export interface Match {
   /** Oznaka utakmice u HRS sustavu (automatsko preuzimanje). */
   hrsId?: number;
   round?: number;
+  /** Termin (sat) još nije određen. */
+  timeTbd?: boolean;
   date: string; // ISO s vremenom
   competition: string;
   team: TeamKey;

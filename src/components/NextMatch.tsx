@@ -19,7 +19,7 @@ export function NextMatchBar({ m, s }: { m: Match; s: Settings }) {
           <TeamLogo name={m.awayTeam} logo={m.awayLogo} clubLogo={s.logo} isUs={m.awayTeam === s.shortName} size={28} />
         </span>
         <span className="flex items-center gap-4 text-white/85">
-          <span>{fmtDay(m.date)}, {fmtDateLong(m.date)} · {fmtTime(m.date)}</span>
+          <span>{fmtDay(m.date)}, {fmtDateLong(m.date)} · {m.timeTbd ? "termin naknadno" : fmtTime(m.date)}</span>
           <span className="hidden lg:inline">{m.venue}</span>
         </span>
       </div>
@@ -59,9 +59,9 @@ export function NextMatchSection({ m, s }: { m: Match; s: Settings }) {
           <div>
             <ul className="mb-6 grid grid-cols-2 gap-px bg-white/15 text-[15px]">
               <li className="flex items-center gap-2.5 bg-red-dark p-4"><CalendarDays className="h-5 w-5 shrink-0" aria-hidden /><span>{fmtDay(m.date)}<br /><b>{fmtDateLong(m.date)}</b></span></li>
-              <li className="flex items-center gap-2.5 bg-red-dark p-4"><Clock className="h-5 w-5 shrink-0" aria-hidden /><span>Početak<br /><b>{fmtTime(m.date)} h</b></span></li>
+              <li className="flex items-center gap-2.5 bg-red-dark p-4"><Clock className="h-5 w-5 shrink-0" aria-hidden /><span>Početak<br /><b>{m.timeTbd ? "naknadno" : `${fmtTime(m.date)} h`}</b></span></li>
               <li className="flex items-center gap-2.5 bg-red-dark p-4"><Trophy className="h-5 w-5 shrink-0" aria-hidden /><span>Natjecanje<br /><b>{m.competition}</b></span></li>
-              <li className="flex items-center gap-2.5 bg-red-dark p-4"><MapPin className="h-5 w-5 shrink-0" aria-hidden /><span>Lokacija<br /><b>{m.venue}</b></span></li>
+              <li className="flex items-center gap-2.5 bg-red-dark p-4"><MapPin className="h-5 w-5 shrink-0" aria-hidden /><span>Lokacija<br /><b>{m.venue || "naknadno"}</b></span></li>
             </ul>
             <Countdown date={m.date} />
             <div className="mt-6 flex flex-wrap gap-3">

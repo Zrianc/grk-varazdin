@@ -1,4 +1,4 @@
-import { BUILDINGS, INNER, SPIRES, WINDOWS, winPath } from "./StariGrad";
+import { CASTLE_OUTLINE, CASTLE_ROOFS, CASTLE_SPIRES, CASTLE_WINDOWS, INNER, winPath } from "./StariGrad";
 
 /**
  * Panorama Varaždina u stilu donjeg dijela klupskog dresa:
@@ -75,9 +75,10 @@ export default function Townscape({ className, variant = "fill", strokeWidth = 2
       <svg viewBox="0 0 2400 320" className={className} preserveAspectRatio={align} fill="none" stroke="currentColor" strokeWidth={strokeWidth} strokeLinejoin="round" aria-hidden="true">
         {SHAPES.map((s, i) => <g key={i}><path d={s.d} />{s.win?.map((w, j) => <path key={j} d={w} />)}</g>)}
         <g transform={CASTLE_T} strokeWidth={strokeWidth / CASTLE_S / 0.9}>
-          {BUILDINGS.map((d, i) => <path key={i} d={d} />)}
-          {WINDOWS.map((w, i) => <path key={`w${i}`} d={winPath(w)} />)}
-          {SPIRES.map(([x, y, h], i) => <path key={`s${i}`} d={`M${x} ${y}V${y - h}`} />)}
+          <path d={CASTLE_OUTLINE} />
+          {CASTLE_ROOFS.map((d, i) => <path key={i} d={d} />)}
+          {CASTLE_WINDOWS.map((d, i) => <path key={`w${i}`} d={d} />)}
+          {CASTLE_SPIRES.map(([x, y, h], i) => <path key={`s${i}`} d={`M${x} ${y}V${y - h}`} />)}
         </g>
       </svg>
     );
@@ -88,14 +89,14 @@ export default function Townscape({ className, variant = "fill", strokeWidth = 2
         <mask id="townscape-mask">
           <rect width="2400" height="320" fill="#fff" />
           {SHAPES.flatMap((s, i) => (s.win ?? []).map((w, j) => <path key={`${i}-${j}`} d={w} fill="#000" />))}
-          <g transform={CASTLE_T}>{WINDOWS.map((w, i) => <path key={i} d={winPath(w)} fill="#000" />)}</g>
+          <g transform={CASTLE_T}>{CASTLE_WINDOWS.map((d, i) => <path key={i} d={d} fill="#000" />)}</g>
         </mask>
       </defs>
       <g mask="url(#townscape-mask)">
         {SHAPES.map((s, i) => <path key={i} d={s.d} />)}
         <g transform={CASTLE_T}>
-          {BUILDINGS.map((d, i) => <path key={i} d={d} />)}
-          {SPIRES.map(([x, y, h], i) => <g key={i}><rect x={x - 2} y={y - h} width="4" height={h} /><circle cx={x} cy={y - h} r="5" /></g>)}
+          <path d={CASTLE_OUTLINE} />
+          {CASTLE_SPIRES.map(([x, y, h], i) => <g key={i}><rect x={x - 2} y={y - h} width="4" height={h} /><circle cx={x} cy={y - h} r="5" /></g>)}
         </g>
       </g>
     </svg>

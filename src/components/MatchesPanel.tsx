@@ -67,7 +67,7 @@ export default function MatchesPanel({ upcoming, past, us, clubLogo, initial = "
                         <span className={`grid h-5 w-5 place-items-center text-[11px] font-bold text-white ${r === "P" ? "bg-emerald-600" : r === "I" ? "bg-charcoal" : "bg-charcoal/40"}`} title={r === "P" ? "Pobjeda" : r === "I" ? "Poraz" : "Neriješeno"}>{r}</span>
                       </span>
                     ) : (
-                      <b className="font-cond text-2xl font-extrabold text-red">{fmtTime(m.date)}</b>
+                      m.timeTbd ? <span className="font-cond text-sm font-bold uppercase leading-tight text-red">Termin<br />naknadno</span> : <b className="font-cond text-2xl font-extrabold text-red">{fmtTime(m.date)}</b>
                     )}
                   </span>
                   <span className={`flex items-center justify-end gap-2 text-right text-[15px] font-semibold ${m.awayTeam === us ? "text-red" : ""}`}>

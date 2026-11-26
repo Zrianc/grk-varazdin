@@ -132,7 +132,10 @@ function venue(m: HrsMatch) {
 
 type Row = { id: string; hrsId: number; competition: string; club: string; logo: string; played: number; won: number; drawn: number; lost: number; goalsFor: number; goalsAgainst: number; points: number; placeholder: boolean };
 
-/** Ljestvica iz rezultata. Redoslijed: bodovi → međusobni susreti (bodovi, gol-razlika) → gol-razlika → dani golovi. */
+/**
+ * Ljestvica iz rezultata. Redoslijed: bodovi → međusobni susreti (samo kad su klubovi s istim brojem
+ * bodova odigrali sve međusobne utakmice, kao na HRS-u) → gol-razlika → dani golovi.
+ */
 export function computeStandings(matches: HrsMatch[], cfg: HrsConfig, clubName: string): Row[] {
   const rows = new Map<number, Row>();
   const row = (id: number, name: string) => {
@@ -168,10 +171,13 @@ export function computeStandings(matches: HrsMatch[], cfg: HrsConfig, clubName: 
   const sorted: Row[] = [];
   [...byPoints.keys()].sort((x, y) => y - x).forEach((pts) => {
     const group = byPoints.get(pts)!;
-    const t = h2h(new Set(group.map((r) => r.hrsId)));
+    const ids = new Set(group.map((r) => r.hrsId));
+    const t = h2h(ids);
+    const legs = (a: number, b: number) => matches.filter((m) => (m.k1 === a && m.k2 === b) || (m.k1 === b && m.k2 === a));
+    const complete = group.length > 1 && group.every((a) => group.every((b) =>
+      a === b || (legs(a.hrsId, b.hrsId).length > 0 && legs(a.hrsId, b.hrsId).every(finished))));
     group.sort((x, y) =>
-      t.get(y.hrsId)!.p - t.get(x.hrsId)!.p ||
-      t.get(y.hrsId)!.gd - t.get(x.hrsId)!.gd ||
+      (complete ? t.get(y.hrsId)!.p - t.get(x.hrsId)!.p || t.get(y.hrsId)!.gd - t.get(x.hrsId)!.gd : 0) ||
       (y.goalsFor - y.goalsAgainst) - (x.goalsFor - x.goalsAgainst) ||
       y.goalsFor - x.goalsFor ||
       x.club.localeCompare(y.club, "hr"));
@@ -192,6 +198,7 @@ export function clubMatches(matches: HrsMatch[], cfg: HrsConfig, clubName: strin
       id: `hrs-${m.broj}`,
       hrsId: m.broj,
       date: zagrebIso(m.pc),
+      timeTbd: /T00:00(:00)?$/.test(m.pc),
       competition: cfg.naziv,
       round: m.kolo ?? undefined,
       team: "prva",
