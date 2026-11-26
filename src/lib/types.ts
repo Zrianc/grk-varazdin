@@ -113,6 +113,9 @@ export interface StaffMember {
 
 export interface Match {
   id: string;
+  /** Oznaka utakmice u HRS sustavu (automatsko preuzimanje). */
+  hrsId?: number;
+  round?: number;
   date: string; // ISO s vremenom
   competition: string;
   team: TeamKey;
@@ -129,6 +132,8 @@ export interface Match {
 
 export interface StandingRow {
   id: string;
+  /** Oznaka kluba u HRS sustavu. */
+  hrsId?: number;
   competition: string;
   club: string;
   logo?: string;
