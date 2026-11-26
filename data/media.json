@@ -1,0 +1,82 @@
+[
+  {
+    "id": "md1",
+    "type": "Utakmice",
+    "title": "[PRIMJER] Utakmice – naslov galerije",
+    "date": "2026-11-25T12:00:00+01:00",
+    "image": "",
+    "photos": [],
+    "videoUrl": "",
+    "placeholder": true
+  },
+  {
+    "id": "md2",
+    "type": "Treninzi",
+    "title": "[PRIMJER] Treninzi – naslov galerije",
+    "date": "2026-11-20T12:00:00+01:00",
+    "image": "",
+    "photos": [],
+    "videoUrl": "",
+    "placeholder": true
+  },
+  {
+    "id": "md3",
+    "type": "Videozapisi",
+    "title": "[PRIMJER] Videozapisi – naslov galerije",
+    "date": "2026-11-15T12:00:00+01:00",
+    "image": "",
+    "photos": [],
+    "videoUrl": "",
+    "placeholder": true
+  },
+  {
+    "id": "md4",
+    "type": "Intervjui",
+    "title": "[PRIMJER] Intervjui – naslov galerije",
+    "date": "2026-11-10T12:00:00+01:00",
+    "image": "",
+    "photos": [],
+    "videoUrl": "",
+    "placeholder": true
+  },
+  {
+    "id": "md5",
+    "type": "Sažeci utakmica",
+    "title": "[PRIMJER] Sažeci utakmica – naslov galerije",
+    "date": "2026-11-05T12:00:00+01:00",
+    "image": "",
+    "photos": [],
+    "videoUrl": "",
+    "placeholder": true
+  },
+  {
+    "id": "md6",
+    "type": "Klupska događanja",
+    "title": "[PRIMJER] Klupska događanja – naslov galerije",
+    "date": "2026-10-31T12:00:00+01:00",
+    "image": "",
+    "photos": [],
+    "videoUrl": "",
+    "placeholder": true
+  },
+  {
+    "id": "md7",
+    "type": "Mlađe kategorije",
+    "title": "[PRIMJER] Mlađe kategorije – naslov galerije",
+    "date": "2026-10-26T12:00:00+01:00",
+    "image": "",
+    "photos": [],
+    "videoUrl": "",
+    "placeholder": true
+  },
+  {
+    "id": "md8",
+    "type": "Utakmice",
+    "title": "[PRIMJER] Utakmice – naslov galerije",
+    "date": "2026-10-21T12:00:00+01:00",
+    "image": "",
+    "photos": [],
+    "videoUrl": "",
+    "placeholder": true
+  }
+]

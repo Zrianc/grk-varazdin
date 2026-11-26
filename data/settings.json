@@ -1,0 +1,82 @@
+{
+  "clubName": "Gradski rukometni klub Varaždin 1930",
+  "shortName": "GRK Varaždin",
+  "founded": "1930",
+  "logo": "/images/grb.png",
+  "address": "[Adresa sjedišta kluba – unijeti službeni podatak], 42000 Varaždin",
+  "arena": "Arena Varaždin",
+  "arenaAddress": "Šetalište Franje Tuđmana 1, 42000 Varaždin",
+  "email": "[e-mail kluba]",
+  "phone": "[telefon kluba]",
+  "facebook": "https://www.facebook.com/p/Gradski-rukometni-klub-Vara%C5%BEdin-100027047367147/",
+  "instagram": "",
+  "youtube": "",
+  "heroVideo": "",
+  "heroImage": "/images/igraci-grk-varazdin-1.jpg",
+  "slogan": "Naš grad. Naš klub. Naš ponos.",
+  "features": {
+    "shop": false,
+    "tickets": false,
+    "tv": false
+  },
+  "standings": {
+    "provider": "local",
+    "competitions": [
+      {
+        "id": "1hrl-sjever",
+        "name": "1. HRL Sjever",
+        "sofascoreWidgetUrl": ""
+      }
+    ]
+  },
+  "academy": {
+    "intro": "Škola rukometa GRK Varaždin okuplja djecu i mlade koji žele naučiti rukomet, razvijati se kao sportaši i postati dio varaždinske rukometne obitelji. [Uvodni tekst – zamijeniti službenim opisom škole.]",
+    "categories": [
+      {
+        "name": "Mini rukomet",
+        "ages": "[dob]",
+        "coach": "[Ime trenera]",
+        "schedule": "[dani i sati]",
+        "location": "[dvorana]",
+        "placeholder": true
+      },
+      {
+        "name": "Mlađi dječaci",
+        "ages": "[dob]",
+        "coach": "[Ime trenera]",
+        "schedule": "[dani i sati]",
+        "location": "[dvorana]",
+        "placeholder": true
+      },
+      {
+        "name": "Stariji dječaci",
+        "ages": "[dob]",
+        "coach": "[Ime trenera]",
+        "schedule": "[dani i sati]",
+        "location": "[dvorana]",
+        "placeholder": true
+      },
+      {
+        "name": "Kadeti",
+        "ages": "[dob]",
+        "coach": "[Ime trenera]",
+        "schedule": "[dani i sati]",
+        "location": "[dvorana]",
+        "placeholder": true
+      },
+      {
+        "name": "Juniori",
+        "ages": "[dob]",
+        "coach": "[Ime trenera]",
+        "schedule": "[dani i sati]",
+        "location": "[dvorana]",
+        "placeholder": true
+      }
+    ],
+    "registration": "[Upute za upis – potrebni dokumenti, liječnički pregled, članarina, rokovi.]",
+    "contactName": "[Ime koordinatora škole]",
+    "contactPhone": "[telefon]",
+    "contactEmail": "[e-mail]"
+  },
+  "mascot": "/images/grb.png"
+}

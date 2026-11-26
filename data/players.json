@@ -1,0 +1,437 @@
+[
+  {
+    "id": "p1",
+    "slug": "igrac-1",
+    "firstName": "[Ime]",
+    "lastName": "[Prezime]",
+    "number": 1,
+    "position": "Vratar",
+    "team": "prva",
+    "image": "",
+    "birthDate": "",
+    "height": "",
+    "nationality": "",
+    "bio": "",
+    "stats": [
+      {
+        "label": "Utakmice",
+        "value": "–"
+      },
+      {
+        "label": "Golovi",
+        "value": "–"
+      },
+      {
+        "label": "Sedmerci",
+        "value": "–"
+      }
+    ],
+    "placeholder": true
+  },
+  {
+    "id": "p12",
+    "slug": "igrac-12",
+    "firstName": "[Ime]",
+    "lastName": "[Prezime]",
+    "number": 12,
+    "position": "Vratar",
+    "team": "prva",
+    "image": "",
+    "birthDate": "",
+    "height": "",
+    "nationality": "",
+    "bio": "",
+    "stats": [
+      {
+        "label": "Utakmice",
+        "value": "–"
+      },
+      {
+        "label": "Golovi",
+        "value": "–"
+      },
+      {
+        "label": "Sedmerci",
+        "value": "–"
+      }
+    ],
+    "placeholder": true
+  },
+  {
+    "id": "p16",
+    "slug": "igrac-16",
+    "firstName": "[Ime]",
+    "lastName": "[Prezime]",
+    "number": 16,
+    "position": "Vratar",
+    "team": "prva",
+    "image": "",
+    "birthDate": "",
+    "height": "",
+    "nationality": "",
+    "bio": "",
+    "stats": [
+      {
+        "label": "Utakmice",
+        "value": "–"
+      },
+      {
+        "label": "Golovi",
+        "value": "–"
+      },
+      {
+        "label": "Sedmerci",
+        "value": "–"
+      }
+    ],
+    "placeholder": true
+  },
+  {
+    "id": "p7",
+    "slug": "igrac-7",
+    "firstName": "[Ime]",
+    "lastName": "[Prezime]",
+    "number": 7,
+    "position": "Lijevo krilo",
+    "team": "prva",
+    "image": "",
+    "birthDate": "",
+    "height": "",
+    "nationality": "",
+    "bio": "",
+    "stats": [
+      {
+        "label": "Utakmice",
+        "value": "–"
+      },
+      {
+        "label": "Golovi",
+        "value": "–"
+      },
+      {
+        "label": "Sedmerci",
+        "value": "–"
+      }
+    ],
+    "placeholder": true
+  },
+  {
+    "id": "p23",
+    "slug": "igrac-23",
+    "firstName": "[Ime]",
+    "lastName": "[Prezime]",
+    "number": 23,
+    "position": "Lijevo krilo",
+    "team": "prva",
+    "image": "",
+    "birthDate": "",
+    "height": "",
+    "nationality": "",
+    "bio": "",
+    "stats": [
+      {
+        "label": "Utakmice",
+        "value": "–"
+      },
+      {
+        "label": "Golovi",
+        "value": "–"
+      },
+      {
+        "label": "Sedmerci",
+        "value": "–"
+      }
+    ],
+    "placeholder": true
+  },
+  {
+    "id": "p3",
+    "slug": "igrac-3",
+    "firstName": "[Ime]",
+    "lastName": "[Prezime]",
+    "number": 3,
+    "position": "Desno krilo",
+    "team": "prva",
+    "image": "",
+    "birthDate": "",
+    "height": "",
+    "nationality": "",
+    "bio": "",
+    "stats": [
+      {
+        "label": "Utakmice",
+        "value": "–"
+      },
+      {
+        "label": "Golovi",
+        "value": "–"
+      },
+      {
+        "label": "Sedmerci",
+        "value": "–"
+      }
+    ],
+    "placeholder": true
+  },
+  {
+    "id": "p17",
+    "slug": "igrac-17",
+    "firstName": "[Ime]",
+    "lastName": "[Prezime]",
+    "number": 17,
+    "position": "Desno krilo",
+    "team": "prva",
+    "image": "",
+    "birthDate": "",
+    "height": "",
+    "nationality": "",
+    "bio": "",
+    "stats": [
+      {
+        "label": "Utakmice",
+        "value": "–"
+      },
+      {
+        "label": "Golovi",
+        "value": "–"
+      },
+      {
+        "label": "Sedmerci",
+        "value": "–"
+      }
+    ],
+    "placeholder": true
+  },
+  {
+    "id": "p9",
+    "slug": "igrac-9",
+    "firstName": "[Ime]",
+    "lastName": "[Prezime]",
+    "number": 9,
+    "position": "Lijevi vanjski",
+    "team": "prva",
+    "image": "",
+    "birthDate": "",
+    "height": "",
+    "nationality": "",
+    "bio": "",
+    "stats": [
+      {
+        "label": "Utakmice",
+        "value": "–"
+      },
+      {
+        "label": "Golovi",
+        "value": "–"
+      },
+      {
+        "label": "Sedmerci",
+        "value": "–"
+      }
+    ],
+    "placeholder": true
+  },
+  {
+    "id": "p33",
+    "slug": "igrac-33",
+    "firstName": "[Ime]",
+    "lastName": "[Prezime]",
+    "number": 33,
+    "position": "Lijevi vanjski",
+    "team": "prva",
+    "image": "",
+    "birthDate": "",
+    "height": "",
+    "nationality": "",
+    "bio": "",
+    "stats": [
+      {
+        "label": "Utakmice",
+        "value": "–"
+      },
+      {
+        "label": "Golovi",
+        "value": "–"
+      },
+      {
+        "label": "Sedmerci",
+        "value": "–"
+      }
+    ],
+    "placeholder": true
+  },
+  {
+    "id": "p10",
+    "slug": "igrac-10",
+    "firstName": "[Ime]",
+    "lastName": "[Prezime]",
+    "number": 10,
+    "position": "Srednji vanjski",
+    "team": "prva",
+    "image": "",
+    "birthDate": "",
+    "height": "",
+    "nationality": "",
+    "bio": "",
+    "stats": [
+      {
+        "label": "Utakmice",
+        "value": "–"
+      },
+      {
+        "label": "Golovi",
+        "value": "–"
+      },
+      {
+        "label": "Sedmerci",
+        "value": "–"
+      }
+    ],
+    "placeholder": true
+  },
+  {
+    "id": "p14",
+    "slug": "igrac-14",
+    "firstName": "[Ime]",
+    "lastName": "[Prezime]",
+    "number": 14,
+    "position": "Srednji vanjski",
+    "team": "prva",
+    "image": "",
+    "birthDate": "",
+    "height": "",
+    "nationality": "",
+    "bio": "",
+    "stats": [
+      {
+        "label": "Utakmice",
+        "value": "–"
+      },
+      {
+        "label": "Golovi",
+        "value": "–"
+      },
+      {
+        "label": "Sedmerci",
+        "value": "–"
+      }
+    ],
+    "placeholder": true
+  },
+  {
+    "id": "p11",
+    "slug": "igrac-11",
+    "firstName": "[Ime]",
+    "lastName": "[Prezime]",
+    "number": 11,
+    "position": "Desni vanjski",
+    "team": "prva",
+    "image": "",
+    "birthDate": "",
+    "height": "",
+    "nationality": "",
+    "bio": "",
+    "stats": [
+      {
+        "label": "Utakmice",
+        "value": "–"
+      },
+      {
+        "label": "Golovi",
+        "value": "–"
+      },
+      {
+        "label": "Sedmerci",
+        "value": "–"
+      }
+    ],
+    "placeholder": true
+  },
+  {
+    "id": "p25",
+    "slug": "igrac-25",
+    "firstName": "[Ime]",
+    "lastName": "[Prezime]",
+    "number": 25,
+    "position": "Desni vanjski",
+    "team": "prva",
+    "image": "",
+    "birthDate": "",
+    "height": "",
+    "nationality": "",
+    "bio": "",
+    "stats": [
+      {
+        "label": "Utakmice",
+        "value": "–"
+      },
+      {
+        "label": "Golovi",
+        "value": "–"
+      },
+      {
+        "label": "Sedmerci",
+        "value": "–"
+      }
+    ],
+    "placeholder": true
+  },
+  {
+    "id": "p5",
+    "slug": "igrac-5",
+    "firstName": "[Ime]",
+    "lastName": "[Prezime]",
+    "number": 5,
+    "position": "Kružni napadač",
+    "team": "prva",
+    "image": "",
+    "birthDate": "",
+    "height": "",
+    "nationality": "",
+    "bio": "",
+    "stats": [
+      {
+        "label": "Utakmice",
+        "value": "–"
+      },
+      {
+        "label": "Golovi",
+        "value": "–"
+      },
+      {
+        "label": "Sedmerci",
+        "value": "–"
+      }
+    ],
+    "placeholder": true
+  },
+  {
+    "id": "p19",
+    "slug": "igrac-19",
+    "firstName": "[Ime]",
+    "lastName": "[Prezime]",
+    "number": 19,
+    "position": "Kružni napadač",
+    "team": "prva",
+    "image": "",
+    "birthDate": "",
+    "height": "",
+    "nationality": "",
+    "bio": "",
+    "stats": [
+      {
+        "label": "Utakmice",
+        "value": "–"
+      },
+      {
+        "label": "Golovi",
+        "value": "–"
+      },
+      {
+        "label": "Sedmerci",
+        "value": "–"
+      }
+    ],
+    "placeholder": true
+  }
+]

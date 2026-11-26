@@ -1,0 +1,137 @@
+[
+  {
+    "id": "s1",
+    "name": "Ilija Puljević",
+    "role": "Glavni trener",
+    "group": "Stručni stožer",
+    "team": "prva",
+    "image": "",
+    "placeholder": false
+  },
+  {
+    "id": "s2",
+    "name": "[Ime Prezime]",
+    "role": "Pomoćni trener",
+    "group": "Stručni stožer",
+    "team": "prva",
+    "image": "",
+    "placeholder": true
+  },
+  {
+    "id": "s3",
+    "name": "[Ime Prezime]",
+    "role": "Trener vratara",
+    "group": "Stručni stožer",
+    "team": "prva",
+    "image": "",
+    "placeholder": true
+  },
+  {
+    "id": "s4",
+    "name": "[Ime Prezime]",
+    "role": "Kondicijski trener",
+    "group": "Stručni stožer",
+    "team": "prva",
+    "image": "",
+    "placeholder": true
+  },
+  {
+    "id": "s5",
+    "name": "[Ime Prezime]",
+    "role": "Fizioterapeut",
+    "group": "Stručni stožer",
+    "team": "prva",
+    "image": "",
+    "placeholder": true
+  },
+  {
+    "id": "s6",
+    "name": "[Ime Prezime]",
+    "role": "Tehniko",
+    "group": "Stručni stožer",
+    "team": "prva",
+    "image": "",
+    "placeholder": true
+  },
+  {
+    "id": "u1",
+    "name": "[Ime Prezime]",
+    "role": "Predsjednik kluba",
+    "group": "Uprava kluba",
+    "team": "prva",
+    "image": "",
+    "placeholder": true
+  },
+  {
+    "id": "u2",
+    "name": "[Ime Prezime]",
+    "role": "Dopredsjednik",
+    "group": "Uprava kluba",
+    "team": "prva",
+    "image": "",
+    "placeholder": true
+  },
+  {
+    "id": "u3",
+    "name": "[Ime Prezime]",
+    "role": "Tajnik",
+    "group": "Uprava kluba",
+    "team": "prva",
+    "image": "",
+    "placeholder": true
+  },
+  {
+    "id": "u4",
+    "name": "[Ime Prezime]",
+    "role": "Član uprave",
+    "group": "Uprava kluba",
+    "team": "prva",
+    "image": "",
+    "placeholder": true
+  },
+  {
+    "id": "u5",
+    "name": "[Ime Prezime]",
+    "role": "Član uprave",
+    "group": "Uprava kluba",
+    "team": "prva",
+    "image": "",
+    "placeholder": true
+  },
+  {
+    "id": "sk1",
+    "name": "[Ime Prezime]",
+    "role": "Voditelj škole rukometa",
+    "group": "Škola rukometa",
+    "team": "mlade",
+    "image": "",
+    "placeholder": true
+  },
+  {
+    "id": "sk2",
+    "name": "[Ime Prezime]",
+    "role": "Trener – mini rukomet",
+    "group": "Škola rukometa",
+    "team": "mlade",
+    "image": "",
+    "placeholder": true
+  },
+  {
+    "id": "sk3",
+    "name": "[Ime Prezime]",
+    "role": "Trener – dječaci",
+    "group": "Škola rukometa",
+    "team": "mlade",
+    "image": "",
+    "placeholder": true
+  },
+  {
+    "id": "sk4",
+    "name": "[Ime Prezime]",
+    "role": "Trener – kadeti i juniori",
+    "group": "Škola rukometa",
+    "team": "mlade",
+    "image": "",
+    "placeholder": true
+  }
+]

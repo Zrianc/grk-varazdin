@@ -1,0 +1,76 @@
+{
+  "intro": "Rukomet u Varaždinu ima gotovo stoljetnu tradiciju. GRK Varaždin 1930 nastavlja dugu priču varaždinskog muškog rukometa, čiji je dugogodišnji nositelj kvalitete bio RK Varteks – klub koji je kroz povijest nekoliko puta mijenjao ime.",
+  "cityBond": "Klub nosi ime grada i igra u Areni Varaždin. [Tekst o povezanosti kluba s gradom, navijačima i lokalnom zajednicom – unijeti službeni sadržaj.]",
+  "timeline": [
+    {
+      "year": "1930.",
+      "title": "Prva službena utakmica",
+      "text": "Varaždinci s ponosom ističu 29. svibnja 1930., kada su učenici varaždinske Gimnazije, zahvaljujući prof. Zvonimiru Suligoju, odigrali prvu službenu rukometnu utakmicu na prostoru bivše Jugoslavije.",
+      "source": "Grad Varaždin, bilten turnira rukometnih veterana (2025.)",
+      "placeholder": false
+    },
+    {
+      "year": "[godina]",
+      "title": "RK Varteks",
+      "text": "[Razdoblje RK Varteks – unijeti provjerene podatke.]",
+      "placeholder": true
+    },
+    {
+      "year": "2009.",
+      "title": "Arena Varaždin",
+      "text": "Otvorena je Arena Varaždin, od tada dom kluba.",
+      "source": "Wikipedia – Varaždin Arena",
+      "placeholder": false
+    },
+    {
+      "year": "2021./22.",
+      "title": "Premijer liga",
+      "text": "Klub je sezonu 2021./2022. u Premijer ligi završio na 5. mjestu od 16 momčadi.",
+      "source": "Wikipedia – GRK Varaždin",
+      "placeholder": false
+    },
+    {
+      "year": "2026./27.",
+      "title": "1. HRL Sjever",
+      "text": "Prva momčad nastupa u 1. HRL Sjever.",
+      "source": "Sofascore",
+      "placeholder": false
+    }
+  ],
+  "achievements": [
+    {
+      "title": "[Uspjeh / trofej – unijeti provjereni podatak]",
+      "placeholder": true
+    },
+    {
+      "title": "[Uspjeh / trofej]",
+      "placeholder": true
+    },
+    {
+      "title": "[Uspjeh / trofej]",
+      "placeholder": true
+    }
+  ],
+  "notablePlayers": [
+    {
+      "name": "[Ime Prezime]",
+      "note": "[razdoblje, uloga]",
+      "placeholder": true
+    },
+    {
+      "name": "[Ime Prezime]",
+      "note": "[razdoblje, uloga]",
+      "placeholder": true
+    },
+    {
+      "name": "[Ime Prezime]",
+      "note": "[razdoblje, uloga]",
+      "placeholder": true
+    },
+    {
+      "name": "[Ime Prezime]",
+      "note": "[razdoblje, uloga]",
+      "placeholder": true
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+[
+  {
+    "id": "t1",
+    "key": "prva",
+    "name": "Prva momčad",
+    "competition": "1. HRL Sjever",
+    "description": "Seniorska momčad GRK Varaždin u sezoni 2026./2027. nastupa u 1. HRL Sjever.",
+    "placeholder": false
+  },
+  {
+    "id": "t2",
+    "key": "druga",
+    "name": "Druga momčad",
+    "competition": "[natjecanje]",
+    "description": "[Opis druge momčadi]",
+    "placeholder": true
+  },
+  {
+    "id": "t3",
+    "key": "mlade",
+    "name": "Mlađe kategorije",
+    "competition": "[natjecanja mlađih kategorija]",
+    "description": "[Opis mlađih kategorija]",
+    "placeholder": true
+  }
+]

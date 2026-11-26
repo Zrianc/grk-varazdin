@@ -1,0 +1,98 @@
+[
+  {
+    "id": "n1",
+    "slug": "primjer-vijesti-1",
+    "title": "[PRIMJER] Najava utakmice 1. HRL Sjever u Areni Varaždin",
+    "excerpt": "Ovo je privremeni tekst koji će zamijeniti službena vijest kluba. Kratak opis prikazuje se na naslovnici i u popisu vijesti.",
+    "body": "Ovo je privremeni sadržaj članka. Službene vijesti kluba unose se kroz administracijsko sučelje (/admin → Vijesti).\n\nSvaki članak ima vlastitu adresu, naslov, opis i naslovnu fotografiju koji se koriste za pretraživače i dijeljenje na društvenim mrežama.\n\nOdlomci se odvajaju praznim retkom.",
+    "category": "Najave utakmica",
+    "date": "2026-11-25T12:00:00+01:00",
+    "image": "",
+    "featured": true,
+    "placeholder": true
+  },
+  {
+    "id": "n2",
+    "slug": "primjer-vijesti-2",
+    "title": "[PRIMJER] Izvještaj s posljednje prvenstvene utakmice",
+    "excerpt": "Ovo je privremeni tekst koji će zamijeniti službena vijest kluba. Kratak opis prikazuje se na naslovnici i u popisu vijesti.",
+    "body": "Ovo je privremeni sadržaj članka. Službene vijesti kluba unose se kroz administracijsko sučelje (/admin → Vijesti).\n\nSvaki članak ima vlastitu adresu, naslov, opis i naslovnu fotografiju koji se koriste za pretraživače i dijeljenje na društvenim mrežama.\n\nOdlomci se odvajaju praznim retkom.",
+    "category": "Izvještaji s utakmica",
+    "date": "2026-11-21T12:00:00+01:00",
+    "image": "",
+    "featured": false,
+    "placeholder": true
+  },
+  {
+    "id": "n3",
+    "slug": "primjer-vijesti-3",
+    "title": "[PRIMJER] Juniori nastavljaju pripreme za drugi dio sezone",
+    "excerpt": "Ovo je privremeni tekst koji će zamijeniti službena vijest kluba. Kratak opis prikazuje se na naslovnici i u popisu vijesti.",
+    "body": "Ovo je privremeni sadržaj članka. Službene vijesti kluba unose se kroz administracijsko sučelje (/admin → Vijesti).\n\nSvaki članak ima vlastitu adresu, naslov, opis i naslovnu fotografiju koji se koriste za pretraživače i dijeljenje na društvenim mrežama.\n\nOdlomci se odvajaju praznim retkom.",
+    "category": "Mlađe kategorije",
+    "date": "2026-11-17T12:00:00+01:00",
+    "image": "",
+    "featured": false,
+    "placeholder": true
+  },
+  {
+    "id": "n4",
+    "slug": "primjer-vijesti-4",
+    "title": "[PRIMJER] Otvoreni upisi u školu rukometa",
+    "excerpt": "Ovo je privremeni tekst koji će zamijeniti službena vijest kluba. Kratak opis prikazuje se na naslovnici i u popisu vijesti.",
+    "body": "Ovo je privremeni sadržaj članka. Službene vijesti kluba unose se kroz administracijsko sučelje (/admin → Vijesti).\n\nSvaki članak ima vlastitu adresu, naslov, opis i naslovnu fotografiju koji se koriste za pretraživače i dijeljenje na društvenim mrežama.\n\nOdlomci se odvajaju praznim retkom.",
+    "category": "Škola rukometa",
+    "date": "2026-11-13T12:00:00+01:00",
+    "image": "",
+    "featured": false,
+    "placeholder": true
+  },
+  {
+    "id": "n5",
+    "slug": "primjer-vijesti-5",
+    "title": "[PRIMJER] Obavijest uprave kluba",
+    "excerpt": "Ovo je privremeni tekst koji će zamijeniti službena vijest kluba. Kratak opis prikazuje se na naslovnici i u popisu vijesti.",
+    "body": "Ovo je privremeni sadržaj članka. Službene vijesti kluba unose se kroz administracijsko sučelje (/admin → Vijesti).\n\nSvaki članak ima vlastitu adresu, naslov, opis i naslovnu fotografiju koji se koriste za pretraživače i dijeljenje na društvenim mrežama.\n\nOdlomci se odvajaju praznim retkom.",
+    "category": "Klupske novosti",
+    "date": "2026-11-09T12:00:00+01:00",
+    "image": "",
+    "featured": false,
+    "placeholder": true
+  },
+  {
+    "id": "n6",
+    "slug": "primjer-vijesti-6",
+    "title": "[PRIMJER] Prva momčad odradila tjedan treninga",
+    "excerpt": "Ovo je privremeni tekst koji će zamijeniti službena vijest kluba. Kratak opis prikazuje se na naslovnici i u popisu vijesti.",
+    "body": "Ovo je privremeni sadržaj članka. Službene vijesti kluba unose se kroz administracijsko sučelje (/admin → Vijesti).\n\nSvaki članak ima vlastitu adresu, naslov, opis i naslovnu fotografiju koji se koriste za pretraživače i dijeljenje na društvenim mrežama.\n\nOdlomci se odvajaju praznim retkom.",
+    "category": "Prva momčad",
+    "date": "2026-11-05T12:00:00+01:00",
+    "image": "",
+    "featured": false,
+    "placeholder": true
+  },
+  {
+    "id": "n7",
+    "slug": "primjer-vijesti-7",
+    "title": "[PRIMJER] Izvještaj s gostovanja",
+    "excerpt": "Ovo je privremeni tekst koji će zamijeniti službena vijest kluba. Kratak opis prikazuje se na naslovnici i u popisu vijesti.",
+    "body": "Ovo je privremeni sadržaj članka. Službene vijesti kluba unose se kroz administracijsko sučelje (/admin → Vijesti).\n\nSvaki članak ima vlastitu adresu, naslov, opis i naslovnu fotografiju koji se koriste za pretraživače i dijeljenje na društvenim mrežama.\n\nOdlomci se odvajaju praznim retkom.",
+    "category": "Izvještaji s utakmica",
+    "date": "2026-11-01T12:00:00+01:00",
+    "image": "",
+    "featured": false,
+    "placeholder": true
+  },
+  {
+    "id": "n8",
+    "slug": "primjer-vijesti-8",
+    "title": "[PRIMJER] Poziv navijačima",
+    "excerpt": "Ovo je privremeni tekst koji će zamijeniti službena vijest kluba. Kratak opis prikazuje se na naslovnici i u popisu vijesti.",
+    "body": "Ovo je privremeni sadržaj članka. Službene vijesti kluba unose se kroz administracijsko sučelje (/admin → Vijesti).\n\nSvaki članak ima vlastitu adresu, naslov, opis i naslovnu fotografiju koji se koriste za pretraživače i dijeljenje na društvenim mrežama.\n\nOdlomci se odvajaju praznim retkom.",
+    "category": "Klupske novosti",
+    "date": "2026-10-28T12:00:00+01:00",
+    "image": "",
+    "featured": false,
+    "placeholder": true
+  }
+]

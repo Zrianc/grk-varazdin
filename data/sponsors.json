@@ -1,0 +1,146 @@
+[
+  {
+    "id": "sp1",
+    "name": "[Generalni sponzor]",
+    "tier": "Generalni sponzor",
+    "logo": "",
+    "url": "",
+    "placeholder": true
+  },
+  {
+    "id": "sp2",
+    "name": "[Glavni sponzor 1]",
+    "tier": "Glavni sponzori",
+    "logo": "",
+    "url": "",
+    "placeholder": true
+  },
+  {
+    "id": "sp3",
+    "name": "[Glavni sponzor 2]",
+    "tier": "Glavni sponzori",
+    "logo": "",
+    "url": "",
+    "placeholder": true
+  },
+  {
+    "id": "sp4",
+    "name": "[Glavni sponzor 3]",
+    "tier": "Glavni sponzori",
+    "logo": "",
+    "url": "",
+    "placeholder": true
+  },
+  {
+    "id": "sp5",
+    "name": "[Službeni partner 1]",
+    "tier": "Službeni partneri",
+    "logo": "",
+    "url": "",
+    "placeholder": true
+  },
+  {
+    "id": "sp6",
+    "name": "[Službeni partner 2]",
+    "tier": "Službeni partneri",
+    "logo": "",
+    "url": "",
+    "placeholder": true
+  },
+  {
+    "id": "sp7",
+    "name": "[Službeni partner 3]",
+    "tier": "Službeni partneri",
+    "logo": "",
+    "url": "",
+    "placeholder": true
+  },
+  {
+    "id": "sp8",
+    "name": "[Službeni partner 4]",
+    "tier": "Službeni partneri",
+    "logo": "",
+    "url": "",
+    "placeholder": true
+  },
+  {
+    "id": "sp9",
+    "name": "[Službeni partner 5]",
+    "tier": "Službeni partneri",
+    "logo": "",
+    "url": "",
+    "placeholder": true
+  },
+  {
+    "id": "sp10",
+    "name": "[Službeni partner 6]",
+    "tier": "Službeni partneri",
+    "logo": "",
+    "url": "",
+    "placeholder": true
+  },
+  {
+    "id": "sp11",
+    "name": "[Prijatelji kluba 1]",
+    "tier": "Prijatelji kluba",
+    "logo": "",
+    "url": "",
+    "placeholder": true
+  },
+  {
+    "id": "sp12",
+    "name": "[Prijatelji kluba 2]",
+    "tier": "Prijatelji kluba",
+    "logo": "",
+    "url": "",
+    "placeholder": true
+  },
+  {
+    "id": "sp13",
+    "name": "[Prijatelji kluba 3]",
+    "tier": "Prijatelji kluba",
+    "logo": "",
+    "url": "",
+    "placeholder": true
+  },
+  {
+    "id": "sp14",
+    "name": "[Prijatelji kluba 4]",
+    "tier": "Prijatelji kluba",
+    "logo": "",
+    "url": "",
+    "placeholder": true
+  },
+  {
+    "id": "sp15",
+    "name": "[Prijatelji kluba 5]",
+    "tier": "Prijatelji kluba",
+    "logo": "",
+    "url": "",
+    "placeholder": true
+  },
+  {
+    "id": "sp16",
+    "name": "[Prijatelji kluba 6]",
+    "tier": "Prijatelji kluba",
+    "logo": "",
+    "url": "",
+    "placeholder": true
+  },
+  {
+    "id": "sp17",
+    "name": "[Prijatelji kluba 7]",
+    "tier": "Prijatelji kluba",
+    "logo": "",
+    "url": "",
+    "placeholder": true
+  },
+  {
+    "id": "sp18",
+    "name": "[Prijatelji kluba 8]",
+    "tier": "Prijatelji kluba",
+    "logo": "",
+    "url": "",
+    "placeholder": true
+  }
+]
