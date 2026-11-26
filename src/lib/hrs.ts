@@ -43,14 +43,71 @@ export async function fetchCompetition(id: number): Promise<HrsComp> {
   return parseCompetition(await res.text());
 }
 
-/** „var natjecanjeobjekt = {…};” → objekt (samo JSON.parse, bez izvršavanja koda). */
+/**
+ * HRS datoteka je JavaScript objekt, ne strogi JSON (npr. ključevi bez navodnika: poredakkraj, mvp;
+ * brojevi s vodećom nulom: 010). Ovdje se to pretvara u ispravan JSON – bez izvršavanja ikakvog koda.
+ */
+export function toStrictJson(src: string): string {
+  let out = "";
+  let i = 0;
+  const n = src.length;
+  let last = ""; // zadnji značajni znak izvan stringa
+  while (i < n) {
+    const c = src[i];
+    if (c === '"') {
+      let j = i + 1;
+      while (j < n && src[j] !== '"') j += src[j] === "\\" ? 2 : 1;
+      out += src.slice(i, j + 1);
+      i = j + 1;
+      last = '"';
+      continue;
+    }
+    if (/[A-Za-z_$]/.test(c) && (last === "{" || last === ",")) {
+      let j = i;
+      while (j < n && /[A-Za-z0-9_$]/.test(src[j])) j++;
+      let k = j;
+      while (k < n && /\s/.test(src[k])) k++;
+      if (src[k] === ":") {
+        out += `"${src.slice(i, j)}"`;
+        i = j;
+        last = "k";
+        continue;
+      }
+    }
+    if (/[0-9-]/.test(c) && /[:,\[]/.test(last)) {
+      let j = i;
+      while (j < n && /[0-9.eE+-]/.test(src[j])) j++;
+      let num = src.slice(i, j);
+      num = num.replace(/^(-?)0+(?=\d)/, "$1");
+      out += num;
+      i = j;
+      last = "0";
+      continue;
+    }
+    if (c === "/" && src[i + 1] === "/") { while (i < n && src[i] !== "\n") i++; continue; }
+    if (c === "/" && src[i + 1] === "*") { const e = src.indexOf("*/", i + 2); i = e < 0 ? n : e + 2; continue; }
+    if (!/\s/.test(c)) last = c;
+    out += c;
+    i++;
+  }
+  // zarez ispred zatvorene zagrade
+  return out.replace(/,(\s*[}\]])/g, "$1");
+}
+
+/** „var natjecanjeobjekt = {…};” → objekt. */
 export function parseCompetition(text: string): HrsComp {
   const start = text.indexOf("{");
   const end = text.lastIndexOf("}");
   if (start < 0 || end < start) throw new Error("HRS: neočekivan format podataka");
-  const data = JSON.parse(text.slice(start, end + 1));
+  const body = text.slice(start, end + 1);
+  let data: HrsComp;
+  try {
+    data = JSON.parse(body);
+  } catch {
+    data = JSON.parse(toStrictJson(body));
+  }
   if (!Array.isArray(data?.lige)) throw new Error("HRS: nema popisa liga");
-  return data as HrsComp;
+  return data;
 }
 
 const finished = (m: HrsMatch) => m.st === 2 && typeof m.r1 === "number" && typeof m.r2 === "number";

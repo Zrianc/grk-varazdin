@@ -10,6 +10,7 @@ import AcademyPromo from "@/components/AcademyPromo";
 import FollowUs from "@/components/FollowUs";
 import Sponsors from "@/components/Sponsors";
 import StariGrad from "@/components/StariGrad";
+import JerseyBand from "@/components/JerseyBand";
 import { getMatches, getNews, getNextMatch, getSettings, getSponsors, getStandings } from "@/lib/content";
 import { fmtDate } from "@/lib/format";
 
@@ -29,6 +30,7 @@ export default async function Home() {
     <>
       {next && <NextMatchBar m={next} s={s} />}
       <HeroSlider slides={slides} video={s.heroVideo || undefined} />
+      <JerseyBand />
 
       {/* NAJNOVIJE VIJESTI */}
       <section className="boxed relative overflow-hidden bg-light py-20">

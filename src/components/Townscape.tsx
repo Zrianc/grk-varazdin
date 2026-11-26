@@ -1,4 +1,4 @@
-import { BUILDINGS, SPIRES, WINDOWS, winPath } from "./StariGrad";
+import { BUILDINGS, INNER, SPIRES, WINDOWS, winPath } from "./StariGrad";
 
 /**
  * Panorama Varaždina u stilu donjeg dijela klupskog dresa:
@@ -67,14 +67,14 @@ const SHAPES: Shape[] = [
 // Stari grad: izvorni viewBox 1600×420, tlo na 330 → skaliran i postavljen na tlo
 const CASTLE_S = 0.78;
 const CASTLE_X = 760 - 250 * CASTLE_S;
-const CASTLE_T = `translate(${CASTLE_X} ${G - 330 * CASTLE_S}) scale(${CASTLE_S})`;
+const CASTLE_T = `translate(${CASTLE_X} ${G - 330 * CASTLE_S}) scale(${CASTLE_S}) ${INNER}`;
 
 export default function Townscape({ className, variant = "fill", strokeWidth = 2, align = "xMidYMax slice" }: Props) {
   if (variant === "line") {
     return (
       <svg viewBox="0 0 2400 320" className={className} preserveAspectRatio={align} fill="none" stroke="currentColor" strokeWidth={strokeWidth} strokeLinejoin="round" aria-hidden="true">
         {SHAPES.map((s, i) => <g key={i}><path d={s.d} />{s.win?.map((w, j) => <path key={j} d={w} />)}</g>)}
-        <g transform={CASTLE_T} strokeWidth={strokeWidth / CASTLE_S}>
+        <g transform={CASTLE_T} strokeWidth={strokeWidth / CASTLE_S / 0.9}>
           {BUILDINGS.map((d, i) => <path key={i} d={d} />)}
           {WINDOWS.map((w, i) => <path key={`w${i}`} d={winPath(w)} />)}
           {SPIRES.map(([x, y, h], i) => <path key={`s${i}`} d={`M${x} ${y}V${y - h}`} />)}
