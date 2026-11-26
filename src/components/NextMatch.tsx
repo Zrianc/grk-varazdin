@@ -7,7 +7,7 @@ import { PlaceholderBadge } from "./Placeholder";
 import { fmtDateLong, fmtDay, fmtTime } from "@/lib/format";
 import type { Match, Settings } from "@/lib/types";
 
-/** Kompaktna traka iduće utakmice (ispod zaglavlja), po uzoru na RK Nexe. */
+/** Kompaktna traka iduće utakmice (ispod zaglavlja). */
 export function NextMatchBar({ m, s }: { m: Match; s: Settings }) {
   return (
     <Link href="#sljedeca-utakmica" className="group block bg-red-dark text-white">

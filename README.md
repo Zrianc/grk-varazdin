@@ -2,7 +2,7 @@
 
 Next.js 15 · React 19 · TypeScript · Tailwind CSS · Lucide ikone · SVG grafika
 
-Struktura i funkcionalnosti po uzoru na rknexe.hr, vizualni identitet prema službenom grbu (dabar), crveno-bijelim dresovima i motivu varaždinskog Starog grada.
+Vizualni identitet prema službenom grbu (dabar), crveno-bijelim dresovima i motivu varaždinskog Starog grada.
 
 ## Pokretanje
 
