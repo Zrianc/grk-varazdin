@@ -10,7 +10,26 @@ import type { CollectionKey, ContentMap, Match, NewsArticle, Player, StaffGroup,
  * (Sanity, Strapi, Payload, Directus…) dovoljno je zamijeniti funkcije
  * `read` i `write` – ostatak aplikacije koristi samo ovaj modul.
  */
-const DATA_DIR = path.join(process.cwd(), "data");
+/** Početni sadržaj koji dolazi s kodom (repozitorij). */
+const SEED_DIR = path.join(process.cwd(), "data");
+/**
+ * Mapa u koju administracija sprema promjene. Na poslužitelju postavite
+ * DATA_DIR na trajni disk (npr. /data) – nova objava koda tada ne briše sadržaj.
+ * Ako datoteka u DATA_DIR još ne postoji, kopira se iz početnog sadržaja.
+ */
+export const DATA_DIR = process.env.DATA_DIR || SEED_DIR;
+
+async function ensureFile(key: string) {
+  const file = path.join(DATA_DIR, `${key}.json`);
+  if (DATA_DIR === SEED_DIR) return file;
+  try {
+    await fs.access(file);
+  } catch {
+    await fs.mkdir(DATA_DIR, { recursive: true });
+    await fs.copyFile(path.join(SEED_DIR, `${key}.json`), file);
+  }
+  return file;
+}
 
 export const COLLECTIONS: CollectionKey[] = [
   "news",
@@ -27,12 +46,12 @@ export const COLLECTIONS: CollectionKey[] = [
 ];
 
 export async function read<K extends CollectionKey>(key: K): Promise<ContentMap[K]> {
-  const raw = await fs.readFile(path.join(DATA_DIR, `${key}.json`), "utf8");
+  const raw = await fs.readFile(await ensureFile(key), "utf8");
   return JSON.parse(raw) as ContentMap[K];
 }
 
 export async function write<K extends CollectionKey>(key: K, value: ContentMap[K]): Promise<void> {
-  const file = path.join(DATA_DIR, `${key}.json`);
+  const file = await ensureFile(key);
   const tmp = `${file}.tmp`;
   await fs.writeFile(tmp, JSON.stringify(value, null, 2), "utf8");
   await fs.rename(tmp, file);

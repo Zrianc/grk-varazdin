@@ -29,6 +29,12 @@ Jednokratno u repozitoriju: **Settings → Pages → Build and deployment → So
 Statična verzija nema administraciju; sadržaj se mijenja uređivanjem datoteka u mapi `data/` na GitHubu, nakon čega se stranica sama ponovno objavi (1–2 min).
 Lokalno: `STATIC_EXPORT=1 BASE_PATH=/grk-varazdin npx next build` (prethodno privremeno uklonite `src/app/admin`, `src/app/api`, `src/app/uploads` i `src/middleware.ts`).
 
+### Poslužitelj s administracijom (npr. Railway)
+
+Varijable okruženja: `ADMIN_PASSWORD`, `ADMIN_SECRET`, `NEXT_PUBLIC_SITE_URL` i `DATA_DIR=/data`.
+Na `/data` montirajte trajni disk (Railway: Volume). Pri prvom pokretanju sadržaj se kopira iz mape `data/` u repozitoriju,
+a sve izmjene iz administracije (i učitane fotografije) spremaju se na disk – nova objava koda ih ne briše.
+
 ## Administracija – `/admin`
 
 Prijava lozinkom iz `ADMIN_PASSWORD`. Moguće je uređivati:
@@ -90,7 +96,7 @@ Ako postoji izvorna vektorska datoteka motiva s dresa, zamijenite geometriju u `
 - `src/lib/admin-schema.ts` – opis polja administracije
 - `src/app/(site)` – javne stranice, `src/app/admin` – administracija, `src/middleware.ts` – zaštita administracije
 
-**Napomena o hostingu:** administracija zapisuje u `data/` na disku, pa je za ovu verziju potreban poslužitelj s trajnim diskom (VPS, Docker, Node hosting). Za serverless hosting (npr. Vercel) prebacite `content.ts` na bazu/CMS, a prijenos datoteka na S3/R2/Cloudinary.
+**Napomena o hostingu:** administracija zapisuje u `DATA_DIR` (zadano `data/`), pa je potreban poslužitelj s trajnim diskom (Railway s Volumeom, VPS, Docker). Za serverless hosting (npr. Vercel) prebacite `content.ts` na bazu/CMS, a prijenos datoteka na S3/R2/Cloudinary.
 
 ## SEO i pristupačnost
 

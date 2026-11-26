@@ -1,5 +1,4 @@
-// Osvježavanje svakih 10 min (iduća utakmica); spremanje u administraciji osvježava odmah.
-export const revalidate = 600;
+import { connection } from "next/server";
 
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -7,6 +6,9 @@ import { getSettings } from "@/lib/content";
 import StariGrad from "@/components/StariGrad";
 
 export default async function SiteLayout({ children }: { children: React.ReactNode }) {
+  // Na poslužitelju se stranice slažu pri svakom posjetu iz aktualnog sadržaja
+  // (promjene iz administracije vidljive su odmah). Statična verzija (GitHub Pages) se slaže unaprijed.
+  if (process.env.NEXT_PUBLIC_STATIC !== "1") await connection();
   const s = await getSettings();
   return (
     <>

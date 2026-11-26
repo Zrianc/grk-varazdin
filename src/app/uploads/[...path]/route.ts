@@ -1,5 +1,6 @@
 import { promises as fs } from "fs";
 import path from "path";
+import { DATA_DIR } from "@/lib/content";
 
 const TYPES: Record<string, string> = { jpg: "image/jpeg", png: "image/png", webp: "image/webp", avif: "image/avif", svg: "image/svg+xml", pdf: "application/pdf" };
 
@@ -9,7 +10,7 @@ export async function GET(_: Request, { params }: { params: Promise<{ path: stri
   if (name.includes("..") || parts.length !== 1) return new Response("Not found", { status: 404 });
   const ext = name.split(".").pop() || "";
   try {
-    const buf = await fs.readFile(path.join(process.cwd(), "data", "uploads", name));
+    const buf = await fs.readFile(path.join(DATA_DIR, "uploads", name));
     return new Response(new Uint8Array(buf), {
       headers: {
         "Content-Type": TYPES[ext] || "application/octet-stream",
