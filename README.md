@@ -19,6 +19,16 @@ npm run build
 npm start
 ```
 
+### Pregled na GitHub Pages (statična verzija)
+
+Pri svakoj promjeni na grani `main` GitHub Actions izgradi statičnu verziju stranice i objavi je u granu `gh-pages`
+(`.github/workflows/github-pages.yml`). Adresa: `https://<korisnik>.github.io/<repozitorij>/`.
+
+Jednokratno u repozitoriju: **Settings → Pages → Build and deployment → Source: Deploy from a branch → Branch: `gh-pages` / `(root)` → Save**.
+
+Statična verzija nema administraciju; sadržaj se mijenja uređivanjem datoteka u mapi `data/` na GitHubu, nakon čega se stranica sama ponovno objavi (1–2 min).
+Lokalno: `STATIC_EXPORT=1 BASE_PATH=/grk-varazdin npx next build` (prethodno privremeno uklonite `src/app/admin`, `src/app/api`, `src/app/uploads` i `src/middleware.ts`).
+
 ## Administracija – `/admin`
 
 Prijava lozinkom iz `ADMIN_PASSWORD`. Moguće je uređivati:

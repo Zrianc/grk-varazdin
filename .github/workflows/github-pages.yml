@@ -1,0 +1,42 @@
+# Statična verzija stranice za GitHub Pages (bez administracije).
+# Pokreće se pri svakoj promjeni na grani main; rezultat objavljuje u granu gh-pages.
+name: Objava na GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - name: Ukloni dijelove koji trebaju poslužitelj (administracija, API)
+        run: rm -rf src/app/admin src/app/api src/app/uploads src/middleware.ts
+      - name: Statični build
+        run: npx next build
+        env:
+          STATIC_EXPORT: "1"
+          BASE_PATH: /${{ github.event.repository.name }}
+          NEXT_PUBLIC_SITE_URL: https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}
+      - run: touch out/.nojekyll
+      - name: Objava u granu gh-pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./out
+          publish_branch: gh-pages
+          force_orphan: true

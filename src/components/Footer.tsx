@@ -3,6 +3,7 @@ import Link from "next/link";
 import { Facebook, Instagram, Mail, MapPin, Phone, Youtube } from "lucide-react";
 import Townscape from "./Townscape";
 import type { Settings } from "@/lib/types";
+import { isStatic } from "@/lib/asset";
 
 export default function Footer({ s }: { s: Settings }) {
   const cols = [
@@ -62,7 +63,7 @@ export default function Footer({ s }: { s: Settings }) {
           <div className="flex flex-wrap gap-5">
             <Link href="/pravila-privatnosti" className="hover:text-white">Pravila privatnosti</Link>
             <Link href="/pravila-o-kolacicima" className="hover:text-white">Pravila o kolačićima</Link>
-            <Link href="/admin" className="hover:text-white">Administracija</Link>
+            {!isStatic && <Link href="/admin" className="hover:text-white">Administracija</Link>}
           </div>
         </div>
       </div>

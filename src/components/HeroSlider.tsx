@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useCallback, useEffect, useState } from "react";
 import { ArrowRight, ChevronLeft, ChevronRight } from "lucide-react";
 import StariGrad from "./StariGrad";
+import { asset } from "@/lib/asset";
 import { PhotoPlaceholder, PlaceholderBadge } from "./Placeholder";
 
 export type Slide = {
@@ -52,6 +53,7 @@ export default function HeroSlider({ slides, video }: { slides: Slide[]; video?:
             )}
           </div>
         ))}
+        {video && <video className="absolute inset-0 h-full w-full object-cover" src={asset(video)} autoPlay muted loop playsInline aria-hidden />}
         {/* crveni prijelaz prema tekstu i diskretan crveni ton */}
         <div className="absolute inset-y-0 left-0 w-1/3 bg-gradient-to-r from-red/70 to-transparent" />
         <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-red-dark/70 to-transparent" />
