@@ -1,0 +1,41 @@
+@import "@fontsource/inter/400.css";
+@import "@fontsource/inter/500.css";
+@import "@fontsource/inter/600.css";
+@import "@fontsource/inter/700.css";
+@import "@fontsource/barlow-condensed/500.css";
+@import "@fontsource/barlow-condensed/600.css";
+@import "@fontsource/barlow-condensed/700.css";
+@import "@fontsource/barlow-condensed/800.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html { scroll-behavior: smooth; }
+  body { @apply bg-white font-sans text-charcoal antialiased; }
+  h1, h2, h3, h4 { @apply font-cond uppercase tracking-wide; }
+  :focus-visible { outline: 3px solid #fff; outline-offset: 2px; box-shadow: 0 0 0 6px #850C0C; }
+}
+
+@layer components {
+  .container-site { @apply mx-auto w-full max-w-site px-5 md:px-8; }
+  .btn { @apply inline-flex items-center gap-2 px-6 py-3 font-cond text-[15px] font-bold uppercase tracking-[.08em] transition-colors duration-200; }
+  .btn-white { @apply btn bg-white text-red hover:bg-light; }
+  .btn-red { @apply btn bg-red text-white hover:bg-red-dark; }
+  .btn-outline { @apply btn border-2 border-white/70 text-white hover:border-white hover:bg-white hover:text-red; }
+  .btn-outline-red { @apply btn border-2 border-red text-red hover:bg-red hover:text-white; }
+  .kicker { @apply inline-block bg-white px-2.5 py-1 font-cond text-xs font-bold uppercase tracking-[.14em] text-red; }
+  .kicker-red { @apply inline-block bg-red px-2.5 py-1 font-cond text-xs font-bold uppercase tracking-[.14em] text-white; }
+  .section-title { @apply font-cond text-4xl font-extrabold uppercase leading-none md:text-6xl; }
+  .link-more { @apply inline-flex items-center gap-2 border-b-2 pb-0.5 font-cond text-sm font-bold uppercase tracking-[.1em]; }
+  .clip-diag { clip-path: polygon(0 0, 100% 0, 100% calc(100% - 48px), 0 100%); }
+  .clip-diag-top { clip-path: polygon(0 48px, 100% 0, 100% 100%, 0 100%); }
+  /* crveno-bijele okomite pruge s dresa */
+  .stripes { background: repeating-linear-gradient(90deg, #fff 0 12px, #D71918 12px 24px); }
+  .stripes-thin { background: repeating-linear-gradient(90deg, #fff 0 6px, #D71918 6px 12px); }
+  .stripes-v { background: repeating-linear-gradient(180deg, #fff 0 10px, #D71918 10px 20px); }
+  /* široki ekrani: svijetle sekcije su „uokvirene“ pa se lijevo i desno vidi crvena pozadina s dvorcem */
+  .boxed { @apply relative min-[1600px]:mx-auto min-[1600px]:max-w-[1520px] min-[1600px]:shadow-[0_0_60px_rgba(0,0,0,.25)]; }
+  .prose-club p { @apply mb-5 text-[17px] leading-relaxed text-charcoal/90; }
+}
