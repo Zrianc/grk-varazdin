@@ -11,7 +11,7 @@ export default async function Page() {
     <>
       <PageHero title="Raspored utakmica" kicker="Natjecanja" crumbs={[{ label: "Natjecanja" }, { label: "Raspored utakmica" }]} />
       <section className="boxed bg-light py-14"><div className="container-site max-w-5xl">
-        <MatchesPanel upcoming={up} past={past} us={s.shortName} clubLogo={s.logo} />
+        <MatchesPanel upcoming={up} past={past} us={s.shortName} clubLogo={s.logo} sofascoreUrl={s.sofascoreTeamUrl} />
       </div></section>
     </>
   );

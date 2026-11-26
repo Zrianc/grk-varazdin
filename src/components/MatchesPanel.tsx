@@ -6,9 +6,9 @@ import { PlaceholderBadge } from "./Placeholder";
 import { dayNum, fmtDay, fmtTime, monthKey, monthLabel, monthShort } from "@/lib/format";
 import type { Match } from "@/lib/types";
 
-type Props = { upcoming: Match[]; past: Match[]; us: string; clubLogo: string; initial?: "up" | "past"; showTabs?: boolean; limit?: number };
+type Props = { upcoming: Match[]; past: Match[]; us: string; clubLogo: string; initial?: "up" | "past"; showTabs?: boolean; limit?: number; sofascoreUrl?: string };
 
-export default function MatchesPanel({ upcoming, past, us, clubLogo, initial = "up", showTabs = true, limit }: Props) {
+export default function MatchesPanel({ upcoming, past, us, clubLogo, initial = "up", showTabs = true, limit, sofascoreUrl }: Props) {
   const [tab, setTab] = useState<"up" | "past">(initial);
   const [month, setMonth] = useState<number | null>(null);
   const list = tab === "up" ? upcoming : past;
@@ -83,6 +83,11 @@ export default function MatchesPanel({ upcoming, past, us, clubLogo, initial = "
           );
         })}
       </ul>
+      {sofascoreUrl && (
+        <a href={sofascoreUrl} target="_blank" rel="noopener noreferrer" className="mt-3 inline-block text-[13px] text-charcoal/60 hover:text-red">
+          Svi rezultati i raspored GRK Varaždin uživo na Sofascoreu →
+        </a>
+      )}
     </div>
   );
 }

@@ -20,12 +20,13 @@
     "tv": false
   },
   "standings": {
-    "provider": "local",
+    "provider": "sofascore",
     "competitions": [
       {
         "id": "1hrl-sjever",
         "name": "1. HRL Sjever",
-        "sofascoreWidgetUrl": ""
+        "sofascoreWidgetUrl": "",
+        "sofascorePage": "https://www.sofascore.com/handball/tournament/croatia/1-hrl-sjever/24948"
       }
     ]
   },
@@ -78,5 +79,6 @@
     "contactPhone": "[telefon]",
     "contactEmail": "[e-mail]"
   },
-  "mascot": "/images/grb.png"
+  "mascot": "/images/grb.png",
+  "sofascoreTeamUrl": "https://www.sofascore.com/handball/team/varazdin/118674"
 }

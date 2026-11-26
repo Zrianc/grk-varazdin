@@ -218,9 +218,18 @@ export interface Settings {
     /** GRK Varaždin TV – prikazuje se samo ako klub ima službeni kanal. */
     tv: boolean;
   };
+  /** Stranica kluba na Sofascoreu – poveznica na sve rezultate i raspored. */
+  sofascoreTeamUrl?: string;
   standings: {
     provider: "local" | "sofascore";
-    competitions: { id: string; name: string; /** URL ugradnje (embed) iz Sofascore widget alata. */ sofascoreWidgetUrl?: string }[];
+    competitions: {
+      id: string;
+      name: string;
+      /** Sofascore widget: adresa ili cijeli kod za ugradnju (<iframe …>) s gumba „Embed live standings”. */
+      sofascoreWidgetUrl?: string;
+      /** Stranica natjecanja na Sofascoreu (poveznica „Izvor”). */
+      sofascorePage?: string;
+    }[];
   };
   academy: {
     intro: string;

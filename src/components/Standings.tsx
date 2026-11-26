@@ -10,13 +10,26 @@ import type { Settings, StandingRow } from "@/lib/types";
  *  - "sofascore": ugrađeni widget (URL se postavlja po natjecanju u /admin → Postavke)
  * Za drugi API dovoljno je dohvatiti retke u obliku StandingRow i proslijediti ih ovdje.
  */
+/** Iz zalijepljenog koda za ugradnju (<iframe src="…">) ili adrese izvuče adresu widgeta. */
+function widgetSrc(v?: string) {
+  if (!v) return "";
+  const m = v.match(/src=["']([^"']+)["']/i);
+  const url = (m ? m[1] : v).trim().replace(/&amp;/g, "&");
+  return /^https:\/\/(widgets\.)?sofascore\.com\//.test(url) ? url : "";
+}
+function widgetHeight(v?: string) {
+  const m = v?.match(/height=["']?(\d+)/i);
+  return m ? Math.max(300, +m[1]) : 720;
+}
+
 export default function Standings({ rows, settings, compact = false }: { rows: StandingRow[]; settings: Settings; compact?: boolean }) {
   const comps = settings.standings.competitions;
   const [comp, setComp] = useState(comps[0]?.name ?? "");
   const cfg = comps.find((c) => c.name === comp);
   const data = rows.filter((r) => r.competition === comp);
   const us = settings.shortName;
-  const anyPlaceholder = data.some((r) => r.placeholder);
+  const src = settings.standings.provider === "sofascore" ? widgetSrc(cfg?.sofascoreWidgetUrl) : "";
+  const anyPlaceholder = !src && data.some((r) => r.placeholder);
 
   return (
     <div>
@@ -31,8 +44,8 @@ export default function Standings({ rows, settings, compact = false }: { rows: S
         <PlaceholderBadge show={anyPlaceholder} className="text-charcoal/50" />
       </div>
 
-      {settings.standings.provider === "sofascore" && cfg?.sofascoreWidgetUrl ? (
-        <iframe src={cfg.sofascoreWidgetUrl} title={`Ljestvica – ${comp}`} className="h-[640px] w-full border-0 bg-white" loading="lazy" />
+      {src ? (
+        <iframe src={src} title={`Ljestvica – ${comp}`} style={{ height: widgetHeight(cfg?.sofascoreWidgetUrl) }} className="w-full border-0 bg-white" loading="lazy" scrolling="no" />
       ) : (
         <div className="overflow-x-auto">
           <table className="w-full min-w-[420px] border-collapse text-[14px]">
@@ -76,6 +89,11 @@ export default function Standings({ rows, settings, compact = false }: { rows: S
             </tbody>
           </table>
         </div>
+      )}
+      {cfg?.sofascorePage && (
+        <a href={cfg.sofascorePage} target="_blank" rel="noopener noreferrer" className="mt-3 inline-block text-[13px] text-charcoal/60 hover:text-red">
+          Ljestvica, rezultati i statistika natjecanja na Sofascoreu →
+        </a>
       )}
     </div>
   );

@@ -51,7 +51,7 @@ export default async function Home() {
         <div className="container-site relative grid gap-12 lg:grid-cols-[1.15fr_1fr]">
           <div>
             <SectionHeading title="Utakmice" href="/natjecanja/raspored" linkLabel="Raspored" />
-            <MatchesPanel upcoming={upcoming} past={past} us={s.shortName} clubLogo={s.logo} limit={5} />
+            <MatchesPanel upcoming={upcoming} past={past} us={s.shortName} clubLogo={s.logo} sofascoreUrl={s.sofascoreTeamUrl} limit={5} />
           </div>
           <div>
             <SectionHeading title="Ljestvica" href="/natjecanja/ljestvica" linkLabel="Cijela ljestvica" />

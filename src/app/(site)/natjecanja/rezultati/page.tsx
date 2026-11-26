@@ -25,7 +25,7 @@ export default async function Page() {
         </div>
       </section>
       <section className="boxed bg-light py-14"><div className="container-site max-w-5xl">
-        <MatchesPanel upcoming={[]} past={past} us={us} clubLogo={s.logo} initial="past" showTabs={false} />
+        <MatchesPanel upcoming={[]} past={past} us={us} clubLogo={s.logo} sofascoreUrl={s.sofascoreTeamUrl} initial="past" showTabs={false} />
       </div></section>
     </>
   );
