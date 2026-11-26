@@ -1,10 +1,15 @@
 # Statična verzija stranice za GitHub Pages (bez administracije).
-# Pokreće se pri svakoj promjeni na grani main; rezultat objavljuje u granu gh-pages.
+# Pokreće se pri svakoj promjeni na grani main i svaka 3 sata (preuzimanje rezultata s HRS-a);
+# rezultat objavljuje u granu gh-pages.
 name: Objava na GitHub Pages
 
 on:
   push:
     branches: [main]
+  schedule:
+    # svaka 3 sata (vrijeme UTC); vikendom navečer svakih sat vremena, kad se igraju utakmice
+    - cron: "23 */3 * * *"
+    - cron: "53 17-22 * * 5,6,0"
   workflow_dispatch:
 
 permissions:
@@ -24,6 +29,20 @@ jobs:
           node-version: 22
           cache: npm
       - run: npm ci
+      - name: Preuzmi raspored, rezultate i ljestvicu s HRS-a
+        id: hrs
+        continue-on-error: true
+        run: npx tsx scripts/hrs-sync.ts data
+      - name: Spremi nove podatke u repozitorij
+        if: steps.hrs.outcome == 'success'
+        run: |
+          if ! git diff --quiet -- data; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add data/matches.json data/standings.json
+            git commit -m "Automatsko ažuriranje rezultata s HRS-a"
+            git push
+          fi
       - name: Ukloni dijelove koji trebaju poslužitelj (administracija, API)
         run: rm -rf src/app/admin src/app/api src/app/uploads src/middleware.ts
       - name: Statični build

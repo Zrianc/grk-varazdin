@@ -45,7 +45,29 @@ export const COLLECTIONS: CollectionKey[] = [
   "settings",
 ];
 
+let lastSync = 0;
+let syncing: Promise<unknown> | null = null;
+/** Na poslužitelju (ne u statičnoj verziji) utakmice i ljestvicu povremeno osvježi s HRS-a. */
+async function maybeSyncHrs() {
+  if (process.env.NEXT_PUBLIC_STATIC === "1" || process.env.NEXT_PHASE === "phase-production-build") return;
+  if (Date.now() - lastSync < 30 * 60 * 1000) return;
+  lastSync = Date.now();
+  syncing ??= (async () => {
+    try {
+      await ensureFile("settings"); await ensureFile("matches"); await ensureFile("standings");
+      const { syncToDir } = await import("./hrs");
+      await syncToDir(DATA_DIR);
+    } catch (e) {
+      console.error("HRS osvježavanje nije uspjelo:", e);
+    } finally {
+      syncing = null;
+    }
+  })();
+  await syncing;
+}
+
 export async function read<K extends CollectionKey>(key: K): Promise<ContentMap[K]> {
+  if (key === "matches" || key === "standings") await maybeSyncHrs();
   const raw = await fs.readFile(await ensureFile(key), "utf8");
   return JSON.parse(raw) as ContentMap[K];
 }

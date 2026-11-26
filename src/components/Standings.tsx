@@ -92,7 +92,7 @@ export default function Standings({ rows, settings, compact = false }: { rows: S
       )}
       {cfg?.sofascorePage && (
         <a href={cfg.sofascorePage} target="_blank" rel="noopener noreferrer" className="mt-3 inline-block text-[13px] text-charcoal/60 hover:text-red">
-          Ljestvica, rezultati i statistika natjecanja na Sofascoreu →
+          Ljestvica, rezultati i statistika natjecanja na stranici HRS-a →
         </a>
       )}
     </div>

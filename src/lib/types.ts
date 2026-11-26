@@ -223,6 +223,8 @@ export interface Settings {
     /** GRK Varaždin TV – prikazuje se samo ako klub ima službeni kanal. */
     tv: boolean;
   };
+  /** Automatsko preuzimanje rasporeda, rezultata i ljestvice s HRS-a. */
+  hrs?: { enabled: boolean; natjecanje: number; klub: number; naziv: string };
   /** Stranica kluba na Sofascoreu – poveznica na sve rezultate i raspored. */
   sofascoreTeamUrl?: string;
   standings: {

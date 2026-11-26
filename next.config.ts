@@ -17,7 +17,7 @@ const nextConfig: NextConfig = {
     : {
         formats: ["image/avif", "image/webp"],
         // Dodajte domenu CMS-a / CDN-a kad slike budu izvan /public
-        remotePatterns: [],
+        remotePatterns: [{ protocol: "https", hostname: "www.sportinfocentar2.com", pathname: "/coman/logo/**" }],
       },
 };
 

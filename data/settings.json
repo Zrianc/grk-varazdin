@@ -26,7 +26,7 @@
         "id": "1hrl-sjever",
         "name": "1. HRL Sjever",
         "sofascoreWidgetUrl": "",
-        "sofascorePage": "https://www.sofascore.com/hr/handball/tournament/croatia/1-hrl-sjever/24948#id:96611"
+        "sofascorePage": "https://hrs.hr/natjecanje/?natjecanje=2005"
       }
     ]
   },
@@ -80,5 +80,11 @@
     "contactEmail": "[e-mail]"
   },
   "mascot": "/images/grb.png",
-  "sofascoreTeamUrl": "https://www.sofascore.com/handball/team/varazdin/118674"
+  "sofascoreTeamUrl": "https://www.sofascore.com/handball/team/varazdin/118674",
+  "hrs": {
+    "enabled": true,
+    "natjecanje": 2005,
+    "klub": 1388,
+    "naziv": "1. HRL Sjever"
+  }
 }

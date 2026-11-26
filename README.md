@@ -35,6 +35,16 @@ Varijable okruženja: `ADMIN_PASSWORD`, `ADMIN_SECRET`, `NEXT_PUBLIC_SITE_URL` i
 Na `/data` montirajte trajni disk (Railway: Volume). Pri prvom pokretanju sadržaj se kopira iz mape `data/` u repozitoriju,
 a sve izmjene iz administracije (i učitane fotografije) spremaju se na disk – nova objava koda ih ne briše.
 
+### Automatski rezultati s HRS-a
+
+Raspored, rezultati i ljestvica preuzimaju se s HRS-a (sustav Sportinfo centar, isti izvor kao hrs.hr/natjecanje/?natjecanje=2005):
+- GitHub Actions svaka 3 sata (vikendom navečer svakih sat vremena) pokreće `scripts/hrs-sync.ts`, ažurira `data/matches.json` i `data/standings.json` i ponovno objavi stranicu;
+- poslužitelj (Railway) iste podatke osvježava sam, najviše svakih 30 minuta.
+
+Postavke (`settings.json → hrs`): `natjecanje` (ID na hrs.hr), `klub` (ID kluba u HRS sustavu, GRK Varaždin = 1388), `enabled`.
+Utakmice tog natjecanja i ljestvicu nije potrebno upisivati ručno (ručne izmjene njih bi se prepisale); ručno se unose samo druge utakmice (kup, prijateljske). Grbovi protivnika preuzimaju se s istog izvora.
+Za novu sezonu promijenite `natjecanje` na novi ID s hrs.hr.
+
 ## Administracija – `/admin`
 
 Prijava lozinkom iz `ADMIN_PASSWORD`. Moguće je uređivati:
