@@ -1,0 +1,1 @@
+(self.webpackChunk_N_E=self.webpackChunk_N_E||[]).push([[856],{2425:(e,t,n)=>{Promise.resolve().then(n.t.bind(n,2619,23)),Promise.resolve().then(n.t.bind(n,1356,23))},9899:(e,t,n)=>{"use strict";function s(e){let{src:t}=e;return t.startsWith("/")?"".concat("/grk-varazdin").concat(t):t}n.r(t),n.d(t,{default:()=>s})}},e=>{e.O(0,[619,356,441,255,358],()=>e(e.s=2425)),_N_E=e.O()}]);
